@@ -11,8 +11,8 @@ import UIKit
 class CustomInputController: UIViewController {
     
     @IBOutlet weak var inputNumView: InputNumView!
-    
     @IBOutlet weak var confirmBtn: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setup()
@@ -25,7 +25,7 @@ class CustomInputController: UIViewController {
     }
     
     private func setup() {
-        inputNumView.setup(numOfRect: 4, margin: 10, pointWidth: 5)
+        inputNumView.setup()
         inputNumView.delegate = self
     }
     

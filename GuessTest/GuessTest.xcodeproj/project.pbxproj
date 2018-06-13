@@ -15,6 +15,7 @@
 		812BED4020CFF2D000452F50 /* GuessMoneyController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 812BED3F20CFF2D000452F50 /* GuessMoneyController.swift */; };
 		812BED4420D0EDC100452F50 /* InputNumView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 812BED4320D0EDC100452F50 /* InputNumView.swift */; };
 		812BED4620D0F04F00452F50 /* CustomInputController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 812BED4520D0F04F00452F50 /* CustomInputController.swift */; };
+		812BED4820D1035900452F50 /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 812BED4720D1035900452F50 /* TestViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		812BED3F20CFF2D000452F50 /* GuessMoneyController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuessMoneyController.swift; sourceTree = "<group>"; };
 		812BED4320D0EDC100452F50 /* InputNumView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputNumView.swift; sourceTree = "<group>"; };
 		812BED4520D0F04F00452F50 /* CustomInputController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomInputController.swift; sourceTree = "<group>"; };
+		812BED4720D1035900452F50 /* TestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +66,7 @@
 				812BED2B20CF954D00452F50 /* ViewController.swift */,
 				812BED3F20CFF2D000452F50 /* GuessMoneyController.swift */,
 				812BED4520D0F04F00452F50 /* CustomInputController.swift */,
+				812BED4720D1035900452F50 /* TestViewController.swift */,
 				812BED4320D0EDC100452F50 /* InputNumView.swift */,
 				812BED2D20CF954D00452F50 /* Main.storyboard */,
 				812BED3020CF954F00452F50 /* Assets.xcassets */,
@@ -148,6 +151,7 @@
 				812BED2C20CF954D00452F50 /* ViewController.swift in Sources */,
 				812BED4620D0F04F00452F50 /* CustomInputController.swift in Sources */,
 				812BED4020CFF2D000452F50 /* GuessMoneyController.swift in Sources */,
+				812BED4820D1035900452F50 /* TestViewController.swift in Sources */,
 				812BED2A20CF954D00452F50 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

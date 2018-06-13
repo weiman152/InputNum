@@ -22,6 +22,7 @@ class InputNumView: UIView {
     }( UITextField() )
     
     private var labelArray = [UILabel]()
+    private var pointLoaction = 0
 
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -51,17 +52,26 @@ class InputNumView: UIView {
 
 extension InputNumView {
     
+     /// 创建框框
+     ///
+     /// - Parameters:
+     ///   - numOfRect: 框框个数
+     ///   - margin: 框框之间的间距
+     ///   - pointWidth: 中间小数点的宽度
+     ///   - pointLocation: 小数点的位置
      func setup(numOfRect: Int = 4 ,
-                           margin: CGFloat = 10,
-                           pointWidth: CGFloat = 5) {
+                margin: CGFloat = 10,
+                pointWidth: CGFloat = 5,
+                pointLocation: Int = 2) {
         
+        self.pointLoaction = pointLocation
         let tempWidth: CGFloat = CGFloat(numOfRect + 1) * margin
-        let width: CGFloat = (bounds.size.width - 5 - tempWidth) / CGFloat(numOfRect)
+        let width: CGFloat = (bounds.size.width - pointWidth - tempWidth) / CGFloat(numOfRect)
         let height: CGFloat = bounds.size.height
         
         for i in 0...numOfRect {
             
-            if i < numOfRect / 2 {
+            if i < pointLocation {
                 // 点的左边
                 let frame = CGRect(x: CGFloat(i) * width + margin * CGFloat(i+1),
                                    y: 0,
@@ -70,7 +80,7 @@ extension InputNumView {
                 let label = createLabel(frame: frame)
                 addSubview(label)
                 labelArray.append(label)
-            } else if i == numOfRect / 2 {
+            } else if i == pointLocation {
                 // 点
                 let frame = CGRect(x: CGFloat(i) * width + margin * CGFloat(i+1),
                                    y: 0,
@@ -96,12 +106,19 @@ extension InputNumView {
         }
     }
     
+    /// 弹出键盘
     func beFirstResponder() {
         textField.becomeFirstResponder()
     }
     
+    /// 获取最终的输入结果
     func getInputText() -> String {
-        return textField.text ?? ""
+        var text = textField.text ?? ""
+        // 插入小数点
+        if text.count > pointLoaction {
+            text.insert(".", at: text.index(text.startIndex, offsetBy: pointLoaction))
+        }
+        return text
     }
     
 }

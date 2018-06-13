@@ -36,6 +36,12 @@ class ViewController: UIViewController {
         present(vc, animated: true, completion: nil)
     }
     
+    @IBAction func thirdAction(_ sender: Any) {
+        let vc = TestViewController.instance()
+        vc.modalPresentationStyle = .custom
+        present(vc, animated: true, completion: nil)
+    }
+    
 }
 
 extension ViewController : GuessMoneyControllerDelegate {
