@@ -46,10 +46,26 @@
                                             <action selector="guseeAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="X3i-ZW-mhT"/>
                                         </connections>
                                     </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vue-DD-GqF">
+                                        <rect key="frame" x="211" y="89.5" width="100" height="30"/>
+                                        <color key="backgroundColor" red="0.01135010189" green="0.66232976649999997" blue="0.77122671740000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="L5b-rG-Mgm"/>
+                                            <constraint firstAttribute="width" constant="100" id="UXm-SD-sHp"/>
+                                        </constraints>
+                                        <state key="normal" title="第二种">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="secondAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="KSL-dr-IPx"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" red="0.1783422893861111" green="0.1280144453" blue="0.42251252468888889" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
+                                    <constraint firstItem="vue-DD-GqF" firstAttribute="top" secondItem="CGn-sf-GPX" secondAttribute="bottom" constant="10" id="4kz-tB-O9s"/>
                                     <constraint firstAttribute="height" constant="128" id="68t-J7-c1P"/>
+                                    <constraint firstItem="vue-DD-GqF" firstAttribute="trailing" secondItem="CGn-sf-GPX" secondAttribute="trailing" id="94U-lS-Y1a"/>
                                     <constraint firstItem="AIK-xU-31n" firstAttribute="centerY" secondItem="6qK-6D-bgS" secondAttribute="centerY" id="Nkg-iK-vqj"/>
                                     <constraint firstAttribute="trailing" secondItem="VDx-AZ-wYL" secondAttribute="trailing" constant="10" id="QDn-yb-Q13"/>
                                     <constraint firstItem="VDx-AZ-wYL" firstAttribute="centerY" secondItem="AIK-xU-31n" secondAttribute="centerY" id="bEO-mA-fhD"/>
@@ -199,6 +215,67 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="o1f-yp-aGc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="921" y="133"/>
+        </scene>
+        <!--Custom Input Controller-->
+        <scene sceneID="siO-Ex-gIr">
+            <objects>
+                <viewController storyboardIdentifier="CustomInputController" id="u6h-Qj-88T" customClass="CustomInputController" customModule="GuessTest" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="EU7-qt-kaL">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DEE-JW-2NH">
+                                <rect key="frame" x="16" y="80" width="343" height="228"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="y9E-W0-Mvi" customClass="InputNumView" customModule="GuessTest" customModuleProvider="target">
+                                        <rect key="frame" x="30" y="50" width="283" height="60"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="60" id="gLH-Am-LMk"/>
+                                        </constraints>
+                                    </view>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fPV-vc-bbc">
+                                        <rect key="frame" x="30" y="140" width="283" height="44"/>
+                                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="44" id="Rte-Jf-fOd"/>
+                                        </constraints>
+                                        <state key="normal" title="确认">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="confirmBtnAction:" destination="u6h-Qj-88T" eventType="touchUpInside" id="ALh-6f-Wfl"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="y9E-W0-Mvi" firstAttribute="leading" secondItem="DEE-JW-2NH" secondAttribute="leading" constant="30" id="961-bK-4gc"/>
+                                    <constraint firstItem="fPV-vc-bbc" firstAttribute="top" secondItem="y9E-W0-Mvi" secondAttribute="bottom" constant="30" id="BpB-h0-FG8"/>
+                                    <constraint firstAttribute="height" constant="228" id="H4s-k6-gA0"/>
+                                    <constraint firstItem="y9E-W0-Mvi" firstAttribute="top" secondItem="DEE-JW-2NH" secondAttribute="top" constant="50" id="W4i-7b-1as"/>
+                                    <constraint firstItem="fPV-vc-bbc" firstAttribute="leading" secondItem="DEE-JW-2NH" secondAttribute="leading" constant="30" id="cD2-tL-UwO"/>
+                                    <constraint firstAttribute="trailing" secondItem="fPV-vc-bbc" secondAttribute="trailing" constant="30" id="irJ-lp-qkM"/>
+                                    <constraint firstAttribute="trailing" secondItem="y9E-W0-Mvi" secondAttribute="trailing" constant="30" id="rgT-i3-jfv"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="0.66666666669999997" alpha="0.5" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="DEE-JW-2NH" firstAttribute="top" secondItem="SL6-45-Yfh" secondAttribute="top" constant="60" id="bBE-7g-vyh"/>
+                            <constraint firstItem="DEE-JW-2NH" firstAttribute="leading" secondItem="SL6-45-Yfh" secondAttribute="leading" constant="16" id="fEM-9p-7rn"/>
+                            <constraint firstItem="SL6-45-Yfh" firstAttribute="trailing" secondItem="DEE-JW-2NH" secondAttribute="trailing" constant="16" id="yJt-x3-dsP"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="SL6-45-Yfh"/>
+                    </view>
+                    <connections>
+                        <outlet property="confirmBtn" destination="fPV-vc-bbc" id="VJf-Uw-UgB"/>
+                        <outlet property="inputNumView" destination="y9E-W0-Mvi" id="Gf4-4R-Yqo"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="QlQ-mx-icL" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1656.8" y="128.18590704647679"/>
         </scene>
     </scenes>
 </document>

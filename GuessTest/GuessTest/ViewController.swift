@@ -24,13 +24,15 @@ class ViewController: UIViewController {
 
     @IBAction func guseeAction(_ sender: Any) {
         
-//        let vc = GussViewController.instance()
-//        vc.modalPresentationStyle = .custom
-//        present(vc, animated: true, completion: nil)
-        
         let vc = GuessMoneyController.instance()
         vc.modalPresentationStyle = .custom
         vc.delegate = self
+        present(vc, animated: true, completion: nil)
+    }
+    
+    @IBAction func secondAction(_ sender: Any) {
+        let vc = CustomInputController.instance()
+        vc.modalPresentationStyle = .custom
         present(vc, animated: true, completion: nil)
     }
     

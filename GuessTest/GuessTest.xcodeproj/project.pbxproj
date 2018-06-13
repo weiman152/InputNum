@@ -13,6 +13,8 @@
 		812BED3120CF954F00452F50 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 812BED3020CF954F00452F50 /* Assets.xcassets */; };
 		812BED3420CF954F00452F50 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 812BED3220CF954F00452F50 /* LaunchScreen.storyboard */; };
 		812BED4020CFF2D000452F50 /* GuessMoneyController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 812BED3F20CFF2D000452F50 /* GuessMoneyController.swift */; };
+		812BED4420D0EDC100452F50 /* InputNumView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 812BED4320D0EDC100452F50 /* InputNumView.swift */; };
+		812BED4620D0F04F00452F50 /* CustomInputController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 812BED4520D0F04F00452F50 /* CustomInputController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		812BED3320CF954F00452F50 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		812BED3520CF954F00452F50 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		812BED3F20CFF2D000452F50 /* GuessMoneyController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuessMoneyController.swift; sourceTree = "<group>"; };
+		812BED4320D0EDC100452F50 /* InputNumView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputNumView.swift; sourceTree = "<group>"; };
+		812BED4520D0F04F00452F50 /* CustomInputController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomInputController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +63,8 @@
 				812BED2920CF954D00452F50 /* AppDelegate.swift */,
 				812BED2B20CF954D00452F50 /* ViewController.swift */,
 				812BED3F20CFF2D000452F50 /* GuessMoneyController.swift */,
+				812BED4520D0F04F00452F50 /* CustomInputController.swift */,
+				812BED4320D0EDC100452F50 /* InputNumView.swift */,
 				812BED2D20CF954D00452F50 /* Main.storyboard */,
 				812BED3020CF954F00452F50 /* Assets.xcassets */,
 				812BED3220CF954F00452F50 /* LaunchScreen.storyboard */,
@@ -138,7 +144,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				812BED4420D0EDC100452F50 /* InputNumView.swift in Sources */,
 				812BED2C20CF954D00452F50 /* ViewController.swift in Sources */,
+				812BED4620D0F04F00452F50 /* CustomInputController.swift in Sources */,
 				812BED4020CFF2D000452F50 /* GuessMoneyController.swift in Sources */,
 				812BED2A20CF954D00452F50 /* AppDelegate.swift in Sources */,
 			);
