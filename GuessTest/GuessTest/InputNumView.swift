@@ -18,8 +18,14 @@ class InputNumView: UIView {
     var delegate: InputNumViewDelegate?
     
     lazy var textField: UITextField = {
+        $0.keyboardType = .numberPad
+        $0.delegate = self
         return $0
     }( UITextField() )
+    lazy var clickButton: UIButton = {
+        $0.addTarget(self, action: #selector(inputClick), for: .touchUpInside)
+        return $0
+    }( UIButton() )
     
     private var labelArray = [UILabel]()
     private var pointLoaction = 0
@@ -27,11 +33,13 @@ class InputNumView: UIView {
     override func awakeFromNib() {
         super.awakeFromNib()
         setup()
+        setupLayout()
     }
     
     override init(frame: CGRect) {
         super.init(frame: frame)
         setup()
+        setupLayout()
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -40,12 +48,16 @@ class InputNumView: UIView {
     
     private func setup() {
         addSubview(textField)
-        textField.keyboardType = .numberPad
-        textField.delegate = self
+        addSubview(clickButton)
     }
     
     private func setupLayout() {
         textField.frame = CGRect(x: 0, y: 0, width: 1, height: 1)
+        clickButton.frame = bounds
+    }
+    
+    @objc private func inputClick() {
+        textField.becomeFirstResponder()
     }
 
 }
@@ -65,7 +77,7 @@ extension InputNumView {
                 pointLocation: Int = 2) {
         
         self.pointLoaction = pointLocation
-        let tempWidth: CGFloat = CGFloat(numOfRect + 1) * margin
+        let tempWidth: CGFloat = CGFloat(numOfRect + 2) * margin
         let width: CGFloat = (bounds.size.width - pointWidth - tempWidth) / CGFloat(numOfRect)
         let height: CGFloat = bounds.size.height
         
@@ -111,6 +123,11 @@ extension InputNumView {
         textField.becomeFirstResponder()
     }
     
+    /// 键盘消失
+    func resignResponder() {
+        textField.resignFirstResponder()
+    }
+    
     /// 获取最终的输入结果
     func getInputText() -> String {
         var text = textField.text ?? ""
@@ -119,6 +136,19 @@ extension InputNumView {
             text.insert(".", at: text.index(text.startIndex, offsetBy: pointLoaction))
         }
         return text
+    }
+    
+    /// 回复原始状态
+    func setOriginalState() {
+        textField.text = ""
+        for label in labelArray {
+            setNormalBorder(label: label)
+            label.text = ""
+        }
+        // 第一个框变成选中状态
+        if let firstLabel = labelArray.first {
+            setSelectBorder(label: firstLabel)
+        }
     }
     
 }
